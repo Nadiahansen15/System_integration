@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Element Object</h1>
+<h2>The addEventListener() Method</h2>
+
+<p>Attach a click event to a button:</p>
+
+<button id="myBtn">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+
+async function jwt(){
+    // let form = document.querySelector("form")
+    let conn = await fetch("/send_jwt", {
+        method: "POST",
+        body : {"cpr":"1","iat":"1000","exp":"1600"}
+    })
+    let res = await conn.text()
+    console.log("SEND JWT says:", res)
+    //if (res == "NO"){parent.postMessage("NO", "*"); return}
+      // SUCCESS
+      // parent.postMessage("no", "*")
+    //parent.postMessage('{"cpr":"1","iat":"1000","exp":"1600"}', "*")
+    }
+
+const element = document.getElementById("myBtn");
+element.addEventListener("click", function() {
+    document.getElementById("demo").innerHTML = "Hello World";
+    console.log("hello")
+    jwt()
+});
+
+</script>
+
+</body>
+</html>
+
+
