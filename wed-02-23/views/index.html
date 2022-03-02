@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIZZAISLIFE</title>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about-us">Abount Us</a>
+        <a href="/contact-us">Contact Us</a>
+    </nav>
+    <main>
+        <iframe src="https://mitid.eu.pythonanywhere.com/" frameborder="0" style="height:18rem;"></iframe>
+    </main>
+    <h1>PIZZAA</h1> 
+</body>
+</html>
+<script>
+    /*
+    JWT
+    CPR
+    {
+        "cpr": "a",
+        "iat", 10000 / timpestamp,
+        "exp": 1600 / expire
+    }
+    */
+    window.addEventListener('message', function(e) {
+        if(e.data == "no")
+            return
+            // validate the JWT in the server
+            // AJAX
+        console.log(e.data);
+    }, false)
+</script>
